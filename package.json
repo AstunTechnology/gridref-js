@@ -1,0 +1,22 @@
+{
+  "name": "gridref-js",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gridref.js",
+  "files": [
+    "gridref.js",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1"
+  }
+}
