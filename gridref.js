@@ -55,35 +55,52 @@ function parse(gridref) {
   e += gridref.slice(0, gridref.length / 2);
   n += gridref.slice(gridref.length / 2);
 
+  var x2, y2;
+
   // normalise to 1m grid, rounding up to centre of grid square:
   switch (gridref.length) {
     case 0:
-      e += '00000';
-      n += '00000';
+      e = parseInt(e + '00000', 10);
+      n = parseInt(n + '00000', 10);
+      x2 = e + 100000;
+      y2 = n + 100000;
       break;
     case 2:
-      e += '0000';
-      n += '0000';
+      e = parseInt(e + '0000', 10);
+      n = parseInt(n + '0000', 10);
+      x2 = e + 10000;
+      y2 = n + 10000;
       break;
     case 4:
-      e += '000';
-      n += '000';
+      e = parseInt(e + '000', 10);
+      n = parseInt(n + '000', 10);
+      x2 = e + 1000;
+      y2 = n + 1000;
       break;
     case 6:
-      e += '00';
-      n += '00';
+      e = parseInt(e + '00', 10);
+      n = parseInt(n + '00', 10);
+      x2 = e + 100;
+      y2 = n + 100;
       break;
     case 8:
-      e += '0';
-      n += '0';
+      e = parseInt(e + '0', 10);
+      n = parseInt(n + '0', 10);
+      x2 = e + 10;
+      y2 = n + 10;
       break;
     case 10:
-      break; // 10-digit refs are already 1m
+      e = parseInt(e, 10);
+      n = parseInt(n, 10);
+      x2 = e + 1;
+      y2 = n + 1;
+      break;
     default:
+      // TODO Should we support sub-meter grid references?
       throw new InvalidGridRef('Too many digits');
   }
 
-  return [parseFloat(e), parseFloat(n)];
+  return [e, n, x2, y2];
 }
 
 class InvalidGridRef extends Error {
