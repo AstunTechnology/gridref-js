@@ -2,7 +2,7 @@
   "name": "gridref-js",
   "type": "module",
   "version": "1.0.0",
-  "description": "",
+  "description": "Parse Ordnance Survey Great Britian alpha-numeric grid references into a bounding box",
   "main": "gridref.js",
   "files": [
     "gridref.js",
@@ -11,8 +11,12 @@
   "scripts": {
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+      "geo",
+      "Ordnance Survey Great Britain",
+      "Bounding Box"
+  ],
+  "author": "Matt Walker",
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^7.0.3",

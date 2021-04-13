@@ -58,6 +58,7 @@ function parse(gridref) {
   var x2, y2;
 
   // normalise to 1m grid, rounding up to centre of grid square:
+  // TODO Clean this up...
   switch (gridref.length) {
     case 0:
       e = parseInt(e + '00000', 10);

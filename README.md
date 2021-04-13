@@ -1,15 +1,15 @@
 # gridref-js
 
-Parse Ordnance Survey Great Britian alpha numeric grid references.
+Parse Ordnance Survey Great Britian alpha numeric grid references into a bounding box.
 
 ## Usage
 
 ```javascript
-import { parse, InvalidGridRef } from './gridref.js';
+import { parse, InvalidGridRef } from './gridref-js';
 
 try {
-  var coords = parse('SU387148');
-  console.log(coords);
+  var bbox = parse('SU387148');
+  console.log(bbox);
 } catch (e) {
   if (e instanceof InvalidGridRef) {
     console.error(e.message);
