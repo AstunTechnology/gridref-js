@@ -9,18 +9,21 @@
     "README.md"
   ],
   "scripts": {
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "doc": "jsdoc2md gridref.js && echo Copy that ^ into README.md"
   },
   "keywords": [
-      "geo",
-      "Ordnance Survey Great Britain",
-      "Bounding Box"
+    "geo",
+    "Ordnance Survey Great Britain",
+    "Bounding Box"
   ],
   "author": "Matt Walker",
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^7.0.3",
     "jest": "^26.6.3",
-    "prettier": "^2.2.1"
-  }
+    "prettier": "^2.2.1",
+    "jsdoc-to-markdown": "^7.0.1"
+  },
+  "dependencies": {}
 }

@@ -2,6 +2,12 @@
 
 Parse Ordnance Survey Great Britian alpha numeric grid references into a bounding box.
 
+## Installation
+
+```shell
+npm i gridref-js
+```
+
 ## Usage
 
 ```javascript
@@ -18,6 +24,23 @@ try {
   }
 }
 ```
+
+## API
+
+<!-- API START -->
+<a name="parse"></a>
+
+## parse(gridref) ⇒ <code>Array.&lt;Number&gt;</code>
+Converts OSGB grid reference (`'SU387148'`) to bounding box in
+British National Grid (`[438700, 114800, 438800, 114900]`)
+
+**Kind**: global function  
+**Returns**: <code>Array.&lt;Number&gt;</code> - Bounding box of grid reference in metres  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| gridref | <code>String</code> | Standard format OSGB grid reference (e.g. SU387148) |
+<!-- API END -->
 
 ## Credit
 

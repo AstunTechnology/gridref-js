@@ -1,9 +1,9 @@
 /**
- * Converts standard grid reference ('SU387148') to fully numeric ref ([438700, 114800])
- *   returned coordinates are the lower, left corner of the grid square in metres
+ * Converts OSGB grid reference (`'SU387148'`) to bounding box in
+ * British National Grid (`[438700, 114800, 438800, 114900]`)
  *
- * @param {String} gridref Standard format OS grid reference (e.g. SU387148)
- * @returns {Array<Number>} Numeric version of grid reference in metres
+ * @param {String} gridref Standard format OSGB grid reference (e.g. SU387148)
+ * @returns {Array<Number>} Bounding box of grid reference in metres
  */
 function parse(gridref) {
   // Must be a string
