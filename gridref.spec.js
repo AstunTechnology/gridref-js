@@ -39,4 +39,11 @@ describe('parse', () => {
     expect(() => parse('SI')).toThrow(InvalidGridRef);
     expect(() => parse('IS')).toThrow(InvalidGridRef);
   });
+  it('Throws if characters after first two are not numeric', () => {
+    expect(() => parse('stok')).toThrow(InvalidGridRef);
+    // Slightly odd test case which was previously parsed as a valid
+    // grid reference as it starts with valid charachters and has an
+    // even number of characters once spaces have been removed
+    expect(() => parse('stoke on trent')).toThrow(InvalidGridRef);
+  });
 });

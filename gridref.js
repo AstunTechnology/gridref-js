@@ -33,6 +33,13 @@ function parse(gridref) {
     throw new InvalidGridRef('First two characters must be A-H or J-Z');
   }
 
+  // Any remaining characters must be numeric
+  if (gridref.length > 2) {
+    if (!/^\d+$/.test(gridref.substr(2))) {
+      throw new InvalidGridRef('All characters after the grid letters must be numeric');
+    }
+  }
+
   // Get numeric values of letter references, mapping A->0, B->1, C->2, etc:
   var l1 = gridref.charCodeAt(0) - 'A'.charCodeAt(0);
   var l2 = gridref.charCodeAt(1) - 'A'.charCodeAt(0);
