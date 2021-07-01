@@ -2,7 +2,7 @@
   "name": "gridref-js",
   "type": "module",
   "version": "1.0.0",
-  "description": "Parse Ordnance Survey Great Britian alpha-numeric grid references into a bounding box",
+  "description": "Parse Ordnance Survey Great Britain alpha-numeric grid references into a bounding box",
   "main": "gridref.js",
   "files": [
     "gridref.js",

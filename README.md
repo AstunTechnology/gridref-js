@@ -1,6 +1,6 @@
 # gridref-js
 
-Parse Ordnance Survey Great Britian alpha numeric grid references into a bounding box.
+Parse Ordnance Survey Great Britain alpha numeric grid references into a bounding box.
 
 ## Installation
 
