@@ -1,5 +1,5 @@
 {
-  "name": "gridref-js",
+  "name": "@astuntech/gridref-js",
   "type": "module",
   "version": "1.0.0",
   "description": "Parse Ordnance Survey Great Britain alpha-numeric grid references into a bounding box",
