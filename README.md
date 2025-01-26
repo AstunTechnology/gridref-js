@@ -5,7 +5,7 @@ Parse Ordnance Survey Great Britain alpha numeric grid references into a boundin
 ## Installation
 
 ```shell
-npm i gridref-js
+npm i @astuntech/gridref-js
 ```
 
 ## Usage
